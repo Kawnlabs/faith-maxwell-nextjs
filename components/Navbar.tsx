@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { company } from '@/content/company';
 
@@ -11,8 +12,12 @@ const links = [
 ] as const;
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const isLightPage = pathname === '/contact';
+  const showBackdrop = solid || isLightPage;
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 40);
@@ -27,10 +32,10 @@ export default function Navbar() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-[90] transition-colors duration-500 ${
-          solid ? 'border-b border-bone/15 bg-ink/85 backdrop-blur-xl' : 'border-b border-transparent'
+          showBackdrop ? 'border-b border-bone/15 bg-ink/90 backdrop-blur-xl' : 'border-b border-transparent'
         }`}
       >
-        <div className={`mx-auto flex max-w-site items-center gap-9 px-5 transition-all duration-500 sm:px-10 lg:px-16 ${solid ? 'py-3.5' : 'py-5'}`}>
+        <div className={`mx-auto flex max-w-site items-center gap-9 px-5 transition-all duration-500 sm:px-10 lg:px-16 ${showBackdrop ? 'py-3.5' : 'py-5'}`}>
           <Link href="/" className="flex flex-none flex-col leading-none">
             <b className="font-display text-[1.16rem] font-normal">{company.shortName}</b>
             <small className="mt-1.5 text-[.55rem] uppercase tracking-[.3em] text-mist">Construction</small>
