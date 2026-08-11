@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-ink text-bone font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    transform: translateZ(0);
+  }
+  ::selection { @apply bg-bronze text-ink; }
+  :focus-visible { outline: 2px solid #C9A574; outline-offset: 3px; }
+}
+
+@layer components {
+  .display { @apply font-display font-light tracking-[-.02em] leading-[1.04]; }
+  .lede { @apply text-mist max-w-[56ch] text-[clamp(1rem,1.3vw,1.2rem)] leading-relaxed; }
+  .eyebrow { @apply flex items-center gap-3 text-[.68rem] uppercase tracking-[.24em] text-bronze-light font-medium; }
+  .eyebrow::before { content: ''; @apply block h-px w-8 bg-bronze/70; }
+
+  .btn {
+    @apply relative inline-flex items-center gap-3 overflow-hidden border border-bronze bg-bronze px-6 py-4
+           text-[.8rem] font-medium uppercase tracking-[.13em] text-ink transition-colors duration-500;
+  }
+  .btn > span { @apply relative z-10; }
+  .btn::after {
+    content: ''; @apply absolute inset-0 z-0 translate-y-full bg-bone transition-transform duration-500 ease-arch;
+  }
+  .btn:hover::after { @apply translate-y-0; }
+  .btn:hover { @apply border-bone text-ink; }
+  .btn-ghost { @apply border-bone/40 bg-transparent text-bone; }
+  .btn-ghost:hover { @apply text-ink; }
+
+  .band { @apply py-[clamp(72px,10vw,140px)]; }
+  .wrap { @apply mx-auto w-full max-w-site px-5 sm:px-10 lg:px-16; }
+  .rule { @apply h-px w-full bg-bone/15; }
+
+  .on-bone .lede { @apply text-[#55514A]; }
+  .on-bone .eyebrow { @apply text-[#7A5C36]; }
+  .on-bone .eyebrow::before { @apply bg-[#7A5C36]; }
+  .on-bone .btn-ghost { @apply border-ink/35 text-ink; }
+  .on-bone .btn-ghost::after { @apply bg-ink; }
+  .on-bone .btn-ghost:hover { @apply text-bone; }
+}
