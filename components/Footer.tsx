@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from '@/components/Logo';
 import { company } from '@/content/company';
 import { services } from '@/content/services';
 
@@ -10,9 +11,9 @@ export default function Footer() {
       <div className="wrap">
         <div className="grid gap-10 pb-14 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <b className="block font-display text-[1.5rem] font-normal">{company.shortName}</b>
-            <i className="mt-2.5 block font-display text-[1.02rem] font-light italic text-mist">“{company.tagline}”</i>
-            <p className="mt-5 max-w-[34ch] text-[.86rem] text-mist">
+            <Logo />
+            <i className="mt-4 block font-display text-[1.02rem] font-light italic text-mist">“{company.tagline}”</i>
+            <p className="mt-4 max-w-[34ch] text-[.86rem] text-mist">
               Construction company based in {company.address.locality}, {company.address.region}, working across London and the South East.
             </p>
           </div>

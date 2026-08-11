@@ -1,0 +1,22 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fmGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#E5C799" />
+      <stop offset="50%" stopColor="#C5A880" />
+      <stop offset="100%" stopColor="#8A6D46" />
+    </linearGradient>
+  </defs>
+  {/* Logo Icon */}
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="40" height="40" rx="4" stroke="url(#fmGoldGrad)" stroke-width="1.5" stroke-opacity="0.4" fill="#0C0D0E" />
+    <path d="M5 16L20 6L35 16" stroke="url(#fmGoldGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M11 13V31" stroke="url(#fmGoldGrad)" stroke-width="2" stroke-linecap="round" />
+    <path d="M11 18H20" stroke="url(#fmGoldGrad)" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M11 24H17" stroke="url(#fmGoldGrad)" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M20 31V19L27 27L34 19V31" stroke="url(#fmGoldGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="8" y1="31" x2="36" y2="31" stroke="url(#fmGoldGrad)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+  {/* Logo Text */}
+  <text x="62" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#F2EFE9" font-weight="400">Faith &amp; Maxwell</text>
+  <text x="62" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#C5A880" letter-spacing="3" font-weight="500">CONSTRUCTION</text>
+</svg>

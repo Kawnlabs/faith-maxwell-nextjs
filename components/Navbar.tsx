@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Logo from '@/components/Logo';
 import { company } from '@/content/company';
 
 const links = [
@@ -56,9 +57,8 @@ export default function Navbar() {
         }`}
       >
         <div className={`mx-auto flex max-w-site items-center gap-8 px-5 transition-all duration-300 sm:px-10 lg:px-16 ${showDarkBg ? 'py-3.5' : 'py-5'}`}>
-          <Link href="/" className="flex flex-none flex-col leading-none">
-            <b className="font-display text-[1.18rem] font-normal text-bone">{company.shortName}</b>
-            <small className="mt-1.5 text-[.55rem] uppercase tracking-[.3em] text-bronze-light">Construction</small>
+          <Link href="/" className="flex flex-none items-center gap-3">
+            <Logo />
           </Link>
 
           <nav className="ml-auto hidden items-center gap-6 lg:flex">
