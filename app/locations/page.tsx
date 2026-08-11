@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Locations from '@/components/Locations';
 import Reveal from '@/components/Reveal';
 import { company } from '@/content/company';
@@ -25,6 +26,10 @@ export default function LocationsPage() {
       <section className="pt-40">
         <div className="wrap">
           <Reveal>
+            <Link href="/" className="mb-6 inline-flex items-center gap-2 text-[.75rem] uppercase tracking-[.18em] text-bronze-light transition-colors hover:text-bone">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden><path d="M13 8H3M7 12L3 8l4-4" stroke="currentColor" strokeWidth="1.3"/></svg>
+              Back to Home
+            </Link>
             <p className="eyebrow">Where we work</p>
             <h1 className="display my-6 text-[clamp(2.4rem,6vw,4.6rem)]">Service areas</h1>
             <p className="lede">

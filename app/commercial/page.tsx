@@ -26,6 +26,10 @@ export default function CommercialPage() {
       <section className="band pt-40">
         <div className="wrap grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
+            <Link href="/" className="mb-6 inline-flex items-center gap-2 text-[.75rem] uppercase tracking-[.18em] text-bronze-light transition-colors hover:text-bone">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden><path d="M13 8H3M7 12L3 8l4-4" stroke="currentColor" strokeWidth="1.3"/></svg>
+              Back to Home
+            </Link>
             <p className="eyebrow">Commercial</p>
             <h1 className="display my-6 text-[clamp(2.3rem,5.5vw,4.2rem)]">Construction expertise for <span className="italic font-light">commercial projects</span></h1>
             <p className="lede">

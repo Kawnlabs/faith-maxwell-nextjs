@@ -33,6 +33,10 @@ export default function ProjectPage({ params }: Props) {
       <section className="pt-32">
         <div className="wrap">
           <Reveal>
+            <Link href="/projects" className="mb-6 inline-flex items-center gap-2 text-[.75rem] uppercase tracking-[.18em] text-bronze-light transition-colors hover:text-bone">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden><path d="M13 8H3M7 12L3 8l4-4" stroke="currentColor" strokeWidth="1.3"/></svg>
+              Back to all projects
+            </Link>
             <p className="eyebrow">{p.status}</p>
             <h1 className="display my-6 max-w-[18ch] text-[clamp(2.3rem,5.5vw,4.4rem)]">{p.title}</h1>
             <p className="text-[.76rem] uppercase tracking-[.18em] text-mist">{p.location} · {p.type}</p>

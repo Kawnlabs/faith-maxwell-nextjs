@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { company } from '@/content/company';
 
 const links = [
+  ['/', 'Home'],
   ['/about', 'About'], ['/services', 'Services'], ['/projects', 'Projects'],
   ['/residential', 'Residential'], ['/commercial', 'Commercial'],
   ['/locations', 'Locations'], ['/contact', 'Contact'],

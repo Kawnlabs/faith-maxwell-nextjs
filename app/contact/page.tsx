@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import EnquiryForm from '@/components/EnquiryForm';
 import Media from '@/components/Media';
 import Reveal from '@/components/Reveal';
@@ -16,6 +17,10 @@ export default function ContactPage() {
     <section className="on-bone band bg-bone pt-40 text-ink">
       <div className="wrap grid gap-14 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
         <Reveal>
+          <Link href="/" className="mb-6 inline-flex items-center gap-2 text-[.75rem] uppercase tracking-[.18em] text-[#7A5C36] transition-colors hover:text-ink">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden><path d="M13 8H3M7 12L3 8l4-4" stroke="currentColor" strokeWidth="1.3"/></svg>
+            Back to Home
+          </Link>
           <p className="eyebrow">Enquiries</p>
           <h1 className="display my-6 text-[clamp(2.3rem,5.5vw,4.2rem)]">Let&apos;s talk about<br />your <span className="italic font-light">project</span></h1>
           <p className="lede">
